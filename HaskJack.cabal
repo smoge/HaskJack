@@ -25,6 +25,8 @@ source-repository head
 
 library
   exposed-modules:
+      FFI.Control
+      FFI.Jack
       Lib
   other-modules:
       Paths_HaskJack
@@ -35,6 +37,7 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
+    , deepseq
   default-language: Haskell2010
 
 executable HaskJack-exe
@@ -49,6 +52,7 @@ executable HaskJack-exe
   build-depends:
       HaskJack
     , base >=4.7 && <5
+    , deepseq
   default-language: Haskell2010
 
 test-suite HaskJack-test
@@ -64,4 +68,5 @@ test-suite HaskJack-test
   build-depends:
       HaskJack
     , base >=4.7 && <5
+    , deepseq
   default-language: Haskell2010
